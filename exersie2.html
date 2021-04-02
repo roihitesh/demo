@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Special Input Types Demo</title>
+</head>
+<body>
+<h3><center>Customer Registration</center></h3><br><br>
+<center><form name="custForm">
+ 
+	 User Name	:    <input type="text" name="name" autofocus pattern="[A-za-z]{0,15}"> <br><br><!-- focus is here when page is loaded) -->
+ 
+     Password 	:   <input type="password" required pattern="[0-9][A-za-z0-9~!@#$%^&*]{6,10}[0-9]" > <br><br>	<!-- password should contain alphabets imposed using pattern attribute -->
+  
+	 Email	:    <input type="email" size="30" name="email" autocomplete="on" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/> <br><br>  <!-- autocomplete provides auto fill feature when set to 'on' -->
+	 
+	 Gender:<!-- radio buttons-->
+     <input type="radio" id="Male" value="Male">
+     <label for="Male">Male</label>
+     <input type="radio" id="Female" value="Female">
+     <label for="Female">Female</label> 
+     <input type="radio" id="Other" value="Other">
+     <label for="Other">Other</label>
+     <br><br>
+	 
+	 Age (Yrs)	:   <input type="number" required min="21" max="60">  <br><br>	<!-- required attribute : Age is necessary -->
+  
+	 Address: <textarea name="Address" id="Address" cols="20" rows="4" maxlength="100" ></textarea>  <br><br>
+ 
+ 	 Company website:  <input type="url">  <br><br>
+  
+	 Choose country: 
+     <input list="country" value="India">
+     <datalist id="country" >
+         <option value="India" ></option>
+         <option value="United States"></option>
+         <option value="Germany"></option>
+         <option value="Japan"></option>
+     </datalist>
+
+	 <br><br>
+	 
+	  Date of Journey: <input type="date">
+      <br><br>
+      <input type="submit">
+      <input type="reset">
+	 
+<br><br>
+</form>
+</center>
+</body>
+</html>
